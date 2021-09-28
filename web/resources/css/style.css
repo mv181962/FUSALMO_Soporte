@@ -101,6 +101,10 @@ body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover{
     font-family: sans-serif;
 }
 
+#mensaje{
+    text-align: justify;
+}
+
 @media screen and (max-width:480px){
     .firstBody{
         background-color: red;
