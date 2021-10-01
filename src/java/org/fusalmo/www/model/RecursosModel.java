@@ -5,7 +5,7 @@
  */
 package org.fusalmo.www.model;
 
-import org.fusalmo.www.utils.JPAUtil;
+import org.fusalmo.www.utils.JpaUtil;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -18,7 +18,7 @@ import org.fusalmo.www.entities.RecursosEntity;
 public class RecursosModel {
     
     public List<RecursosEntity> listarRecursos(){
-        EntityManager em= JPAUtil.getEntityManager();
+        EntityManager em= JpaUtil.getEntityManager();
         try{
             Query consulta= em.createNamedQuery("RecursosEntity.findAll");
             List<RecursosEntity> lista= consulta.getResultList();
