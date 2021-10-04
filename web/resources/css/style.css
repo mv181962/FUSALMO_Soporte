@@ -32,6 +32,13 @@ body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover{
     font-family: sans-serif;
 }
 
+.titleH3{
+    color: #68717A;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
 .welcome{
     padding-top: 2%;
     width: 80%;

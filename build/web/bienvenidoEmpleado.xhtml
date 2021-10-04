@@ -5,12 +5,78 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
+<<<<<<< Updated upstream
         <title>Inicio</title>
         <h:outputStylesheet library="css" name="style.css"/>
         <h:outputStylesheet library="css" name="primeflex.min.css" />
     </h:head>
     <h:body>
         Hello from Facelets
+=======
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputStylesheet library="css" name="primeflex.min.css" />
+    </h:head>
+    <h:body class="firstBody">
+        
+        <menu class="menu">
+
+            <div class="card">
+
+                <h:form>
+
+                    <p:menubar style="background-color: #299795; border-radius: 0%; border: none;">
+
+                        <p:menuitem url="index.xhtml">
+                            
+                            <h:outputLabel value="FUSALMO IT PORTAL" style="color: #DEE2E6; font-weight: bold;"/>
+
+                        </p:menuitem>
+
+                    </p:menubar>
+
+                </h:form>
+
+            </div>
+
+        </menu>
+        
+        <div class="welcome">
+            <div class="p-grid">
+            <div class="title p-col-8">
+                
+                <h1 class="titleH1">Bienvenido/a <br/> Empleado</h1>
+                
+            </div>
+            <div class="image p-col-4">
+                
+                <h:graphicImage library="img" name="LogoFusalmo.png" class="styleImage"/>
+                    </div>
+            </div>
+            <p:divider class=""/>
+            
+        </div>
+
+        <div>
+            <h1 class="titleH3" style="width: 80%; margin: auto">Menú de opciones:</h1>
+            <h:form class="p-grid" style="width: 80%; margin: auto">
+                <br/>
+                <div class="p-col-4">
+                    <p:panelGrid columns="1">
+                        <f:facet name="header">
+                            <p:graphicImage library="img" name="woman-blue.jpg" class="styleImage"/>
+                        </f:facet>
+                        <h:outputText value="Token" style="font-weight: bold; color: #152536; font-size: 18pt;"/>
+                    </p:panelGrid>
+                </div>
+                <div class="p-col-4">
+                    <p:graphicImage library="img" name="person-laptop.jpg" class="styleImage"/>
+                </div>
+            </h:form>
+            
+        </div>
+        
+>>>>>>> Stashed changes
     </h:body>
 </html>
 
