@@ -15,7 +15,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `soportefusalmo`
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `prestamorecursos` (
   KEY `fk_IdMemo` (`IdMemo`),
   KEY `fk_IdRecurso` (`IdRecurso`),
   KEY `fk_IdEmpleado` (`IdEmpleado`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `prestamorecursos`
@@ -234,7 +234,7 @@ CREATE TABLE IF NOT EXISTS `tipomemo` (
   `IdTipo` char(3) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `Nombre` varchar(30) NOT NULL,
   PRIMARY KEY (`IdTipo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `tipomemo`
