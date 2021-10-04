@@ -9,9 +9,13 @@ and open the template in the editor.
 */
 
 body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover{
-            
+          
     background: #32B7B4;
             
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    font-family: sans-serif;
 }
 
 .firstBody, .menu{
@@ -39,6 +43,13 @@ body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover{
     letter-spacing: 1px;
 }
 
+.title-opciones{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #152536;
+    font-size: 18pt;
+}
+
 .welcome{
     padding-top: 2%;
     width: 80%;
@@ -46,7 +57,7 @@ body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover{
     text-align: center;
 }
 
-.styleImage{
+.styleImageHeader{
     width: 59%;
 }
 
@@ -107,6 +118,17 @@ body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover{
 .hrefForgetPassword{
     margin-left: 2%;
     font-family: sans-serif;
+}
+
+.opciones{
+    border: 1px solid #DEE2E6;
+   box-sizing: border-box;
+   border-radius: 4px;
+   height: 465px;
+}
+.info-opciones{
+   position: relative;
+   top: 50px;
 }
 
 #mensaje{

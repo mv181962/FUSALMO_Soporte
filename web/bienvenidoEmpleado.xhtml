@@ -5,15 +5,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-<<<<<<< Updated upstream
         <title>Inicio</title>
-        <h:outputStylesheet library="css" name="style.css"/>
-        <h:outputStylesheet library="css" name="primeflex.min.css" />
-    </h:head>
-    <h:body>
-        Hello from Facelets
-=======
-        <title>Facelet Title</title>
         <h:outputStylesheet library="css" name="style.css"/>
         <h:outputStylesheet library="css" name="primeflex.min.css" />
     </h:head>
@@ -50,7 +42,7 @@
             </div>
             <div class="image p-col-4">
                 
-                <h:graphicImage library="img" name="LogoFusalmo.png" class="styleImage"/>
+                <h:graphicImage library="img" name="LogoFusalmo.png" class="styleImageHeader"/>
                     </div>
             </div>
             <p:divider class=""/>
@@ -61,22 +53,34 @@
             <h1 class="titleH3" style="width: 80%; margin: auto">Menú de opciones:</h1>
             <h:form class="p-grid" style="width: 80%; margin: auto">
                 <br/>
-                <div class="p-col-4">
-                    <p:panelGrid columns="1">
-                        <f:facet name="header">
-                            <p:graphicImage library="img" name="woman-blue.jpg" class="styleImage"/>
-                        </f:facet>
-                        <h:outputText value="Token" style="font-weight: bold; color: #152536; font-size: 18pt;"/>
-                    </p:panelGrid>
+                <div class="p-col-4 opciones">
+                    <p:graphicImage library="img" name="woman-blue.jpg" class="styleImage"/>
+                    <div class="info-opciones">
+                        <h:outputText value="Token" class="title-opciones"/>
+                        <br/>
+                        <br/>
+                        <p:outputLabel value="Esta sección es para que nos reporte si tiene un problema con su recurso."/>
+                        <br/>
+                        <br/>
+                        <p:commandButton value="CREAR TOKEN" styleClass="ui-button-outlined ui-button-help" style="margin-bottom: 10px"/>
+                        <p:commandButton value="VER TOKENS EN PROCESO E HISTORIAL" styleClass="ui-button-outlined"/>
+                    </div>
                 </div>
-                <div class="p-col-4">
+                <div class="p-col-4 opciones">
                     <p:graphicImage library="img" name="person-laptop.jpg" class="styleImage"/>
+                    <div class="info-opciones">
+                        <h:outputText value="Mis recursos" class="title-opciones"/>
+                        <br/>
+                        <br/>
+                        <p:outputLabel value="Aquí puede ver el equipo (o los equipos) que tiene asignado."/>
+                        <br/>
+                        <br/>
+                        <p:commandButton value="VER MIS RECURSOS ASIGNADOS" styleClass="ui-button-outlined"/>
+                    </div>
                 </div>
             </h:form>
-            
+            <br/>
         </div>
-        
->>>>>>> Stashed changes
     </h:body>
 </html>
 
