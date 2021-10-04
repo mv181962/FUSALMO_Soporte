@@ -69,8 +69,9 @@ body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover{
 }
 
 .formLogin{
-    width: 27%; margin:
-        auto; margin-bottom: 3.5%;
+    width: 27%; 
+    margin:auto; 
+    margin-bottom: 3.5%;
 }
 
 .gridField{
@@ -102,7 +103,7 @@ body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover{
 }
 
 #mensaje{
-    text-align: justify;
+    text-align: left;
 }
 
 @media screen and (max-width:480px){
