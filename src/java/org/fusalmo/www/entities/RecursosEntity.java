@@ -12,6 +12,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -55,6 +56,9 @@ public class RecursosEntity implements Serializable {
     private boolean cargador;
     @Basic(optional = false)
     private String codActivo;
+    @Basic(optional = false)
+    @Lob
+    private String imagen;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idRecurso")
     private List<MantenimientosEntity> mantenimientosEntityList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idRecurso")
@@ -77,7 +81,7 @@ public class RecursosEntity implements Serializable {
         this.id = id;
     }
 
-    public RecursosEntity(String id, String nombre, String marca, String modelo, String numSerie, boolean cargador, String codActivo) {
+    public RecursosEntity(String id, String nombre, String marca, String modelo, String numSerie, boolean cargador, String codActivo, String imagen) {
         this.id = id;
         this.nombre = nombre;
         this.marca = marca;
@@ -85,6 +89,7 @@ public class RecursosEntity implements Serializable {
         this.numSerie = numSerie;
         this.cargador = cargador;
         this.codActivo = codActivo;
+        this.imagen = imagen;
     }
 
     public String getId() {
@@ -157,6 +162,14 @@ public class RecursosEntity implements Serializable {
 
     public void setCodActivo(String codActivo) {
         this.codActivo = codActivo;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public List<MantenimientosEntity> getMantenimientosEntityList() {
