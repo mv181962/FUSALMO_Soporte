@@ -66,10 +66,26 @@
                         <h:outputText value="#{token.descripcion}"/>
                     </p:column>
                     <p:column headerText="Bitácora de soporte">
-                        <p:commandButton value="Detalle" styleClass="ui-button-outlined ui-button-secondary"/>
+                        <p:commandButton value="Detalle" styleClass="ui-button-outlined ui-button-secondary"
+                                         oncomplete="#{tokensBean.selectedToken}"  onclick="PF('detalleToken').show()"/>
                     </p:column>
                 </p:dataTable>
-                
+                <div style="margin-top: 15px">
+                    <p:commandButton value="CREAR TOKEN NUEVO" styleClass="ui-button-outlined ui-button-help"/>
+                    <p:commandButton value="REGRESAR A MENÚ DE OPCIONES" styleClass="ui-button-outlined ui-button-info" action="bienvenidoEmpleado" style="margin-left: 10px"/>
+                </div>
+                <p:dialog header="Estado: #{tokensBean.selectedToken.idEstado.nombre}" widgetVar="detalleToken" modal="true"
+                          showEffect="fade" hideEffect="fade" resizable="false">
+                    <p:outputPanel id="tokenDetail" style="text-align: justify">
+                        <p:column >
+                            <div class="dialog">
+                                <h:outputText value="Espera al personal que llegará a su estación de trabajo"/>
+                            </div>
+                            <br/>
+                            <p:commandButton value="Entendido" styleClass="ui-button-help" style="float: right" onclick="PF('detalleToken').close()"/>
+                        </p:column>
+                    </p:outputPanel>
+                </p:dialog>
             </h:form>
         </div>
         
