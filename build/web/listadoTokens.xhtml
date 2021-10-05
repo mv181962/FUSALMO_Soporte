@@ -5,7 +5,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
     xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>FUSALMO Portal TI - Inicio</title>
+        <title>FUSALMO IT Portal - Tokens</title>
         <h:outputStylesheet library="css" name="style.css"/>
         <h:outputStylesheet library="css" name="primeflex.min.css" />
     </h:head>
@@ -52,8 +52,7 @@
         <div class="container">
             <h1 class="titleH3" >Mis tokens</h1>
             <h:form class="p-grid">
-                <p:dataTable id="tokens" var="token" value="#{tokensBean.listaTokens}" rowKey="#{token.id}"
-                             selection="#{tokensBean.selectedToken}" selectionMode="single">
+                <p:dataTable id="tokens" var="token" value="#{tokensBean.listaTokens}" rowKey="#{token.id}" stripedRows="true">
                     <p:column headerText="Fecha de creación">
                         <h:outputText value="#{token.fecha}">
                             <f:convertDateTime pattern="dd/MM/yyyy"/> 
@@ -67,7 +66,8 @@
                     </p:column>
                     <p:column headerText="Bitácora de soporte">
                         <p:commandButton value="Detalle" styleClass="ui-button-outlined ui-button-secondary"
-                                         oncomplete="#{tokensBean.selectedToken}"  onclick="PF('detalleToken').show()"/>
+                                         oncomplete="PF('detalleToken').show()">     
+                        </p:commandButton>
                     </p:column>
                 </p:dataTable>
                 <div style="margin-top: 15px">
@@ -77,7 +77,7 @@
                 <p:dialog header="Estado: #{tokensBean.selectedToken.idEstado.nombre}" widgetVar="detalleToken" modal="true"
                           showEffect="fade" hideEffect="fade" resizable="false">
                     <p:outputPanel id="tokenDetail" style="text-align: justify">
-                        <p:column >
+                        <p:column>
                             <div class="dialog">
                                 <h:outputText value="Espera al personal que llegará a su estación de trabajo"/>
                             </div>
